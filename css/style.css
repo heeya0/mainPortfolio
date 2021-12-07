@@ -69,7 +69,7 @@ a {text-decoration: none;}
 --------------------------------------------------*/
 #visual {width: 100%;height: 100vh;background-color: #2C3E50;}
 #visual .inner {justify-content: center;height: 100%;}
-#visual .title {margin-bottom: 2.375rem;color: #fff;font-size: 3.75rem;font-weight: 100;text-align: center;}
+#visual .title {margin-bottom: 2.375rem;border-bottom: 0;color: #fff;font-size: 3.75rem;font-weight: 100;text-align: center;}
 #visual .text {position: relative;padding-top: 2.375rem;color: #fff;font-size: 2.5rem;font-weight: 100;}
 #visual .text::before {content: '';position: absolute;top: 0;left: 50%;width: 6.25rem;height: .0625rem;background-color: #fff;transform: translateX(-50%);}
 @media screen and (max-width:61.25rem) {
