@@ -45,7 +45,7 @@ a {text-decoration: none;}
   #header .inner {padding: 0 1.25rem;}
 }
 @media screen and (max-width:61.25rem) {
-  #header .right .menu-btn {display: flex;}
+  #header .right .menu-btn {display: block;}
   #header .right .menu-wrap {position: fixed;top: 0;right: 0;flex-direction: column;width: 15.625rem;height: 100vh;transform: translateX(100%);box-shadow: inset .3125rem 0rem .625rem -0.5625rem #000;}
   #header .right .menu-wrap>.menu {flex-direction: column;width: 100%;}
   #header .right .menu-wrap>.menu>li {height: 4.375rem;padding: 0;border-bottom: .0625rem solid #2c3e50;}
