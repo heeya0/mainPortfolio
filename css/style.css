@@ -28,7 +28,7 @@ a {text-decoration: none;}
 #header .left .logo>a {color: #fff;}
 #header.on .left .logo>a {color: #2C3E50;}
 #header .right .menu-btn {display: none;width: 2rem;height: 2rem;fill: #fff;}
-#header.on .right .menu-btn {fill: #2C3E50;}
+#header.on .right .menu-btn {fill: #2C3E50!important;}
 #header .right .menu-wrap {display: flex;align-items: center;}
 #header .right .menu-wrap>.menu {display: flex;}
 #header .right .menu-wrap>.menu>li {padding: 0 3rem 0 0;}
