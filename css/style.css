@@ -125,7 +125,7 @@ a {text-decoration: none;}
 /*--------------------------------------------------
 # 메인 - STUDY
 --------------------------------------------------*/
-#studying .box-wrap .box {display: flex;justify-content: center;width: 23.5rem;padding: 1.25rem 0;border-radius: .3125rem;text-align: center;box-shadow: 0 0 .3125rem 0 #bdc3c7;}
+#studying .box-wrap .box {display: flex;justify-content: center;align-items: center;width: 23.5rem;padding: 1.25rem 0;border-radius: .3125rem;text-align: center;box-shadow: 0 0 .3125rem 0 #bdc3c7;}
 #studying .box-wrap .box>.sub-title {color: #2C3E50;}
 @media screen and (max-width:75rem) {
   #studying .box-wrap {padding: 0 1.25rem;}
