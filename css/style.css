@@ -26,15 +26,6 @@
 }
 
 /*--------------------------------------------------
-# 메인 공통
---------------------------------------------------*/
-#main section {padding: 100px 0;}
-#main section:first-child {padding: 0;}
-#main .inner {display: flex;flex-direction: column;align-items: center;}
-#main .title {display: inline-flex;border-bottom: 3px solid #3f63bf;color: #3f63bf;font-size: 40px;}
-#main .box-wrap {display: flex;width: 100%;margin-top: 50px;}
-
-/*--------------------------------------------------
 # 메인 - 비주얼
 --------------------------------------------------*/
 #visual {width: 100%;height: 100vh;background-color: #3f63bf;}
