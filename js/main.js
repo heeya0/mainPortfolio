@@ -46,5 +46,5 @@ $(function(){
 
 // particle.min.js hosted on GitHub (https://github.com/JulianLaval/canvas-particle-network)
 let canvasDiv = document.getElementById('particle-canvas');
-let options = {particleColor: '#e37575', interactive: true, speed: 'slow', density: 'medium'};
+let options = {particleColor: '#e37575', interactive: false, speed: 'slow', density: 'medium'};
 let particleCanvas = new ParticleNetwork(canvasDiv, options);
