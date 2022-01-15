@@ -21,9 +21,8 @@
   #header .right .menu-btn {display: block;}
   #header .right .menu-wrap {position: absolute;top: 0;right: 0;flex-direction: column;width: 250px;height: 100vh;transform: translateX(100%);box-shadow: inset 5px 0px 10px -9px #000;}
   #header .right .menu-wrap > .menu {flex-direction: column;width: 100%;}
-  #header .right .menu-wrap > .menu > li {max-height: 70px;padding: 24px 0;border-bottom: 1px solid #dbdfea;}
-  #header .right .menu-wrap > .menu > li:last-child {padding: 24px 0;}
-  #header .right .menu-wrap > .menu > li > a {display: block;width: 100%;height: 100%;color: #424874!important;text-align: center;}
+  #header .right .menu-wrap > .menu > li {max-height: 70px;padding: 0;border-bottom: 1px solid #dbdfea;}
+  #header .right .menu-wrap > .menu > li > a {display: block;width: 100%;height: 100%;padding: 24px 0;color: #424874!important;text-align: center;}
 }
 
 /*--------------------------------------------------
