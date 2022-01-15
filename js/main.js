@@ -21,7 +21,7 @@ $(function(){
   --------------------------------------------------*/
   $(window).on('resize', function(){
     winWidth = $(window).width();
-    if(winWidth > 980){
+    if(winWidth > 960){
       $('#header .menu-btn').removeClass('on');
       $('#header, #main, #footer').css({'transform':'none', 'transition':'.3s'});
     }
@@ -43,3 +43,5 @@ $(function(){
     $('html, body').animate({scrollTop:$(this.hash).offset().top}, 500);
   });
 });
+
+// 타이핑 테스트

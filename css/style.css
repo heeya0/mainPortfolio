@@ -1,49 +1,49 @@
 /*--------------------------------------------------
 # 헤더
 --------------------------------------------------*/
-#header {position: fixed;width: 100%;height: 70px;transition: .3s;z-index: 5;}
-#header.on {background-color: #fff;-webkit-box-shadow:0 0 7px 2px rgb(0 0 0 / 10%), 0 0 0 0 rgb(0 0 0 / 10%), 0 0 0 0 rgb(0 0 0 / 10%);box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.1), 0px 0px 0px 0px rgba(0,0,0,0.1), 0px 0px 0px 0px rgba(0,0,0,0.1);transition: .3s;}
+#header {position: fixed;width: 100%;height: 70px;border-bottom: 1px solid transparent;transition: .3s;z-index: 5;}
+#header.on {background-color: #fff;border-bottom: 1px solid #dbdfea;transition: .3s;}
 #header .inner {align-items: center;height: 100%;}
 #header .left .logo > a {color: #fff;}
-#header.on .left .logo > a {color: #3f63bf;}
+#header.on .left .logo > a {color: #424874;}
 #header .right .menu-btn {display: none;width: 32px;height: 32px;fill: #fff;}
-#header.on .right .menu-btn {fill: #3f63bf!important;}
+#header.on .right .menu-btn {fill: #424874!important;}
 #header .right .menu-wrap {display: flex;align-items: center;}
 #header .right .menu-wrap > .menu {display: flex;}
 #header .right .menu-wrap > .menu > li {padding: 0 48px 0 0;}
 #header .right .menu-wrap > .menu > li:last-child {padding: 0;}
 #header .right .menu-wrap > .menu > li > a {color: #fff;}
-#header.on .right .menu-wrap > .menu > li > a {color: #000;}
+#header.on .right .menu-wrap > .menu > li > a {color: #424874;}
 @media screen and (max-width:1200px) {
   #header .inner {padding: 0 20px;}
 }
 @media screen and (max-width:980px) {
   #header .right .menu-btn {display: block;}
-  #header .right .menu-wrap {position: fixed;top: 0;right: 0;flex-direction: column;width: 250px;height: 100vh;transform: translateX(100%);box-shadow: inset 5px 0px 10px -9px #000;}
+  #header .right .menu-wrap {position: absolute;top: 0;right: 0;flex-direction: column;width: 250px;height: 100vh;transform: translateX(100%);box-shadow: inset 5px 0px 10px -9px #000;}
   #header .right .menu-wrap > .menu {flex-direction: column;width: 100%;}
-  #header .right .menu-wrap > .menu > li {height: 70px;padding: 0;border-bottom: 1px solid #000;}
-  #header .right .menu-wrap > .menu > li > a {display: flex;justify-content: center;align-items: center;width: 100%;height: 100%;color: #000!important;}
+  #header .right .menu-wrap > .menu > li {height: 70px;padding: 0;border-bottom: 1px solid #dbdfea;}
+  #header .right .menu-wrap > .menu > li > a {display: flex;justify-content: center;align-items: center;width: 100%;height: 100%;color: #424874!important;}
 }
 
 /*--------------------------------------------------
 # 메인 - 비주얼
 --------------------------------------------------*/
-#visual {width: 100%;height: 100vh;background-color: #3f63bf;}
+#visual {width: 100%;height: 100vh;background-color: #424874;}
 #visual .inner {justify-content: center;height: 100%;}
-#visual .title {margin-bottom: 38px;border-bottom: 0;color: #fff;font-size: 60px;font-weight: 100;text-align: center;}
-#visual .text {position: relative;padding-top: 38px;color: #fff;font-size: 40px;font-weight: 100;}
-#visual .text::before {content: '';position: absolute;top: 0;left: 50%;width: 100px;height: 1px;background-color: #fff;transform: translateX(-50%);}
+#visual .title-wrap > li:nth-child(n+1):nth-child(-n+3) {border-bottom: 0;color: #fff;font-size: 60px;font-weight: 100;text-align: center;}
+#visual .title-wrap > li:last-child {color: #fff;font-size: 40px;font-weight: 100;text-align: center;}
+#visual .title-wrap > li:last-child::before {content: '';display: block;width: 100px;height: 1px;margin: 30px auto 30px;background-color: #fff;}
 @media screen and (max-width:980px) {
-  #visual .title {font-size: 50px;}
-  #visual .text {font-size: 35px;}
+  #visual .title-wrap > li:nth-child(n+1):nth-child(-n+3) {font-size: 50px;}
+  #visual .title-wrap > li:last-child {font-size: 35px;}
 }
 @media screen and (max-width:768px) {
-  #visual .title {font-size: 40px;}
-  #visual .text {font-size: 30px;}
+  #visual .title-wrap > li:nth-child(n+1):nth-child(-n+3) {font-size: 40px;}
+  #visual .title-wrap > li:last-child {font-size: 30px;}
 }
 @media screen and (max-width:480px) {
-  #visual .title {font-size: 30px;}
-  #visual .text {font-size: 20px;}
+  #visual .title-wrap > li:nth-child(n+1):nth-child(-n+3) {font-size: 30px;}
+  #visual .title-wrap > li:last-child {font-size: 20px;}
 }
 
 /*--------------------------------------------------
@@ -117,9 +117,9 @@
 #portfolio .box-wrap .box > .bar {display: flex;justify-content: space-between;align-items: center;padding: 10px;}
 #portfolio .box-wrap .box > .bar > .sub-title {color: #000;}
 #portfolio .box-wrap .box > .bar > .btn-wrap {display: flex;align-self: stretch;}
-#portfolio .box-wrap .box > .bar > .btn-wrap > .btn {position: relative;display: flex;justify-content: center;align-items: center;width: 110px;height: 46px;padding: 10px 30px;border: 1px solid #3f63bf;border-radius: 5px;color: #3f63bf;font-weight: bold;overflow: hidden;}
-#portfolio .box-wrap .box > .bar > .btn-wrap > .btn:hover {background-color: #3f63bf;color: #fff;transition: .3s;}
-#portfolio .box-wrap .box > .bar > .btn-wrap > .btn::after {content: '';position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: #3f63bf;transform: translateX(-101%);transition: .3s;z-index: -1;}
+#portfolio .box-wrap .box > .bar > .btn-wrap > .btn {position: relative;display: flex;justify-content: center;align-items: center;width: 110px;height: 46px;padding: 10px 30px;border: 1px solid #424874;border-radius: 5px;color: #424874;font-weight: bold;overflow: hidden;}
+#portfolio .box-wrap .box > .bar > .btn-wrap > .btn:hover {background-color: #424874;color: #fff;transition: .3s;}
+#portfolio .box-wrap .box > .bar > .btn-wrap > .btn::after {content: '';position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: #424874;transform: translateX(-101%);transition: .3s;z-index: -1;}
 #portfolio .box-wrap .box > .bar > .btn-wrap > .btn:hover::after {transform: translateX(0);}
 #portfolio .box-wrap .box > .bar > .btn-wrap > .source {margin-right: 10px;}
 @media screen and (max-width:1200px) {
@@ -141,6 +141,5 @@
 /*--------------------------------------------------
 # 푸터
 --------------------------------------------------*/
-#footer {width: 100%;padding: 30px 0;background-color: #f4f5f7;}
-#footer .text,
-#footer .copyright {color: #000;font-size: 14px;text-align: center;}
+#footer {width: 100%;padding: 20px 0;background-color: #f4f5f7;}
+#footer .copyright {color: #424874;font-size: 14px;text-align: center;}
