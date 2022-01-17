@@ -1,3 +1,7 @@
+$(window).on('load', function(){
+  $('.loading-wrap').delay(150).fadeOut();
+});
+
 $(function(){
   /*--------------------------------------------------
   # 변수 선언
@@ -42,9 +46,12 @@ $(function(){
     $('#header, #main, #footer').css({'transform':'none', 'transition':'.3s'});
     $('html, body').animate({scrollTop:$(this.hash).offset().top}, 500);
   });
+
+
 });
 
 // particle.min.js hosted on GitHub (https://github.com/JulianLaval/canvas-particle-network)
 let canvasDiv = document.getElementById('particle-canvas');
 let options = {particleColor: '#e37575', interactive: false, speed: 'slow', density: 'medium'};
 let particleCanvas = new ParticleNetwork(canvasDiv, options);
+
