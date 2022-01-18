@@ -24,13 +24,17 @@ function preset(){
 --------------------------------------------------*/
 $(window).on('load', function(){
   $('.loading-wrap').delay(150).fadeOut();
+  $('section').removeAttr('class'); 
   $('#visual').addClass('on');
 });
 
 /*--------------------------------------------------
-# 리프레시 맨 위로
+# 리프레시 스크롤 최상단
 --------------------------------------------------*/
-$('html, body').animate({scrollTop: 0}, 'fast');
+history.scrollRestoration = 'manual';
+$(window).on('beforeunload', function(){
+  $(window).scrollTop(0);
+});
 
 /*--------------------------------------------------
 # 헤더 스크롤 이벤트
