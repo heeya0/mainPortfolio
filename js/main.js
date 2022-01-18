@@ -24,6 +24,7 @@ function preset(){
 --------------------------------------------------*/
 $(window).on('load', function(){
   $('.loading-wrap').delay(150).fadeOut();
+  $('#visual').addClass('on');
 });
 
 /*--------------------------------------------------
