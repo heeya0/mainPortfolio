@@ -5,6 +5,19 @@ let winWidth = $(window).width();
 let canvasDiv = document.getElementById('particle-canvas');
 let options = {particleColor: '#e37575', interactive: false, speed: 'slow', density: 'medium'};
 let particleCanvas = new ParticleNetwork(canvasDiv, options);
+let i = [];
+
+/*--------------------------------------------------
+# 함수 선언
+--------------------------------------------------*/
+function preset(){
+  i = [];
+  $('section').each(function(){
+    i.push($(this).offset().top);
+  });
+  i.push($('section').last().offset().top + $('section').last().height());
+  i[0] = 0;
+}
 
 /*--------------------------------------------------
 # 로드 이벤트
@@ -19,7 +32,7 @@ $(window).on('load', function(){
 $('html, body').animate({scrollTop: 0}, 'fast');
 
 /*--------------------------------------------------
-# 스크롤 이벤트
+# 헤더 스크롤 이벤트
 --------------------------------------------------*/
 $(window).scroll(function(){
   let scroll = $(window).scrollTop();
@@ -28,6 +41,23 @@ $(window).scroll(function(){
   } else {
     $('#header').removeClass('on');
   }
+});
+
+/*--------------------------------------------------
+# 섹션 스크롤 이벤트
+--------------------------------------------------*/
+$(window).on('resize', function(){
+  preset();
+});
+preset();
+
+$(window).on('scroll', function(){
+  let scrolls = $(this).scrollTop() + $(window).height();
+  $('section').each(function(ins){
+    if(scrolls >= i[ins] + 200 && scrolls <= i[ins+1]){
+      $('section').eq(ins).addClass('on')
+    }
+  });
 });
 
 /*--------------------------------------------------

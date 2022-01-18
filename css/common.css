@@ -16,7 +16,8 @@ body {background-color: #f5f6fa;}
 /*--------------------------------------------------
 # 메인
 --------------------------------------------------*/
-#main section {padding: 100px 0;}
+#main section {padding: 100px 0;transform: translateY(100px);transition: 1s;opacity: 0;}
+#main section.on {transform: translateY(0px);opacity: 1;}
 #main section:first-child {padding: 0;}
 #main .inner {display: flex;flex-direction: column;align-items: center;}
 #main .title {display: inline-flex;border-bottom: 3px solid #424874;color: #424874;font-size: 40px;}
