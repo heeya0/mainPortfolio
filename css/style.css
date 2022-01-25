@@ -29,11 +29,12 @@
 # 메인 - 비주얼
 --------------------------------------------------*/
 #visual {width: 100%;height: 100vh;background-color: #424874;}
-#visual .inner {justify-content: center;height: 100%;}
+#visual .inner {position: relative;justify-content: center;height: 100%;}
 #visual .title-wrap {z-index: 1;}
 #visual .title-wrap > li:nth-child(n+1):nth-child(-n+3) {border-bottom: 0;color: #fff;font-size: 60px;font-weight: 100;text-align: center;}
 #visual .title-wrap > li:last-child {color: #fff;font-size: 40px;font-weight: 100;text-align: center;}
 #visual .title-wrap > li:last-child::before {content: '';display: block;width: 100px;height: 1px;margin: 30px auto 30px;background-color: #fff;}
+#visual .arrow-bottom {position: absolute;bottom: 100px;left: 50%;width: 40px;height: 40px;background: url('/img/arrow_bottom.svg') no-repeat center;background-size: cover;transform: translateX(-50%);animation: arrow 1.5s infinite;}
 @media screen and (max-width:980px) {
   #visual .title-wrap > li:nth-child(n+1):nth-child(-n+3) {font-size: 50px;}
   #visual .title-wrap > li:last-child {font-size: 35px;}
@@ -46,7 +47,10 @@
   #visual .title-wrap > li:nth-child(n+1):nth-child(-n+3) {font-size: 30px;}
   #visual .title-wrap > li:last-child {font-size: 20px;}
 }
-
+@keyframes arrow {
+  0% {opacity: 1;}
+  100% {bottom: 50px;opacity: 0;}
+}
 /*--------------------------------------------------
 # 메인 - ABOUT
 --------------------------------------------------*/
