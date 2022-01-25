@@ -2,9 +2,6 @@
 # 변수 선언
 --------------------------------------------------*/
 let winWidth = $(window).width();
-let canvasDiv = document.getElementById('particle-canvas');
-let options = {particleColor: '#e37575', interactive: false, speed: 'slow', density: 'medium'};
-let particleCanvas = new ParticleNetwork(canvasDiv, options);
 let i = [];
 
 /*--------------------------------------------------
@@ -59,7 +56,7 @@ preset();
 $(window).on('scroll', function(){
   let scrolls = $(this).scrollTop() + $(window).height();
   $('section').each(function(ins){
-    if(scrolls >= i[ins] + 200 && scrolls <= i[ins+1]){
+    if(scrolls >= i[ins] && scrolls <= i[ins+1]){
       $('section').eq(ins).addClass('on')
     }
   });
