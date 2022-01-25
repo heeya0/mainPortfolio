@@ -34,8 +34,6 @@
 #visual .title-wrap > li:nth-child(n+1):nth-child(-n+3) {border-bottom: 0;color: #fff;font-size: 60px;font-weight: 100;text-align: center;}
 #visual .title-wrap > li:last-child {color: #fff;font-size: 40px;font-weight: 100;text-align: center;}
 #visual .title-wrap > li:last-child::before {content: '';display: block;width: 100px;height: 1px;margin: 30px auto 30px;background-color: #fff;}
-#particle-canvas {position: absolute!important;top: 0;left: 0;width: 100%;height: 100%;z-index: 0;overflow: hidden;}
-#particle-canvas > div {background: none!important;}
 @media screen and (max-width:980px) {
   #visual .title-wrap > li:nth-child(n+1):nth-child(-n+3) {font-size: 50px;}
   #visual .title-wrap > li:last-child {font-size: 35px;}
